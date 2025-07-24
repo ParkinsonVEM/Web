@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Temas\temaOscuro\EstiloEjercicio.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="temas.js"></script>
+    <title>AppVem</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <button><a href="Main.html"><span class="material-symbols-outlined">
+                    home
+                </span></a></button>
+        <H1>Park&Son</H1>
+        <button><a href="ArteTerapia.html"><span class="material-symbols-outlined">
+                    undo
+                </span></a></button>
+    </header>
+    <br>
+
+    <!-- Seccion Principal -->
+     <br>
+     <div class="section-ruti-container">
+        <div class="section-ruti">
+            <h2>Dibujo 8</h2><br>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <div style="width: 100%; max-width: 928px;">
+                <canvas id="pizarra" style="width: 100%; height: 50vw; max-height: 522px; min-height: 250px; background: white; border: 2px solid #888; border-radius: 24px; touch-action: none; display: block;"></canvas>
+              </div>
+              <br>
+              <div style="width: 100%; display: flex; justify-content: center;">
+                <button id="limpiarPizarra">
+                  <span class="material-symbols-outlined" style="font-size: 5rem;">undo</span>
+                </button>
+              </div>
+            </div>
+            <p class="text-small">Facilita la expresión emocional no verbal, reduce el estrés, la ansiedad y la depresión.<br></p>
+                <div class="section-sliders">
+                    <h4>Dificultad</h4>
+                    <div class="slider-container">
+                    <input type="range" id="SliderHabilidad" min="0" max="10" value="4" disabled>
+                    <span class="min-value"><span class="material-symbols-outlined">
+                        mood
+                        </span></span>
+                    <span class="max-value"><span class="material-symbols-outlined">
+                        sentiment_very_dissatisfied
+                        </span></span>
+                        <br>
+                    </div>
+                    <br>
+                    <h2>Trata de dibujar la figura lo mejor posible</h2>
+                    <br>
+                </div>
+        </div>
+     </div>
+     <h5>Ningún video es de nuestra propiedad</h5>
+     <h5>Este Ejercicio fue añadido en la expansión 2.0</h5>
+<br>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Park&Son</p>
+        <p>Todos los derechos reservados</p>
+    </footer>
+  
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // No necesitamos buscar el botón de temas en esta página
+    // Inicializar el tema actual
+    const currentTema = localStorage.getItem('tema') || 'oscuro';
+    updateStylesheets(currentTema);
+
+    // Script de la pizarra responsive
+    const canvas = document.getElementById('pizarra');
+    const ctx = canvas.getContext('2d');
+    let dibujando = false;
+    let lastX = 0, lastY = 0;
+
+ function dibujarFiguraReferencia() {
+  ctx.save();
+  ctx.globalAlpha = 0.35;
+  ctx.strokeStyle = '#888';
+  ctx.lineWidth = 8;
+  const r1 = Math.min(canvas.width, canvas.height) * 0.33;
+  const r2 = r1 * 0.4;
+  const cx = canvas.width/2, cy = canvas.height/2;
+  ctx.beginPath();
+  for(let i=0; i<10; i++) {
+    const angle = Math.PI/2 + i * Math.PI/5;
+    const r = i % 2 === 0 ? r1 : r2;
+    const x = cx + r * Math.cos(angle);
+    const y = cy - r * Math.sin(angle);
+    if(i === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.closePath();
+  ctx.stroke();
+  ctx.restore();
+}
+
+    // Ajustar tamaño del canvas al contenedor y redibujar figura
+    function resizeCanvas() {
+      const parent = canvas.parentElement;
+      const width = parent.offsetWidth;
+      // Altura proporcional, pero nunca menor a 250px ni mayor a 522px
+      let height = Math.min(Math.max(width * 0.56, 250), 522);
+      canvas.width = width;
+      canvas.height = height;
+      canvas.style.height = height + 'px';
+      // Redibujar figura de referencia
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      dibujarFiguraReferencia();
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function getPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      if (e.touches && e.touches.length > 0) {
+        return {
+          x: (e.touches[0].clientX - rect.left) * (canvas.width / rect.width),
+          y: (e.touches[0].clientY - rect.top) * (canvas.height / rect.height)
+        };
+      } else {
+        return {
+          x: (e.clientX - rect.left) * (canvas.width / rect.width),
+          y: (e.clientY - rect.top) * (canvas.height / rect.height)
+        };
+      }
+    }
+
+    function empezar(e) {
+      dibujando = true;
+      const pos = getPos(e);
+      lastX = pos.x;
+      lastY = pos.y;
+    }
+    function dibujar(e) {
+      if (!dibujando) return;
+      e.preventDefault();
+      const pos = getPos(e);
+      ctx.strokeStyle = 'red';
+      ctx.lineWidth = 4;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      lastX = pos.x;
+      lastY = pos.y;
+    }
+    function terminar() {
+      dibujando = false;
+    }
+
+    // Eventos para mouse
+    canvas.addEventListener('mousedown', empezar);
+    canvas.addEventListener('mousemove', dibujar);
+    canvas.addEventListener('mouseup', terminar);
+    canvas.addEventListener('mouseleave', terminar);
+
+    // Eventos para touch
+    canvas.addEventListener('touchstart', empezar);
+    canvas.addEventListener('touchmove', dibujar);
+    canvas.addEventListener('touchend', terminar);
+    canvas.addEventListener('touchcancel', terminar);
+
+    // Botón limpiar
+    document.getElementById('limpiarPizarra').addEventListener('click', function() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      dibujarFiguraReferencia();
+    });
+  });
+</script>
+
+    <script>
+        const container = document.querySelector('.section-ruti-container');
+const sections = document.querySelectorAll('.section-ruti');
+
+container.addEventListener('scroll', () => {
+  const scrollLeft = container.scrollLeft;
+  const currentSection = sections[ Math.floor(scrollLeft / container.offsetWidth) ];
+
+  sections.forEach((section) => section.classList.remove('active'));
+  currentSection.classList.add('active');
+});
+    </script>
+
+</body>
+
+</html>
