@@ -1,0 +1,245 @@
+/* General y variables */
+
+* {
+  margin: 3px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+  --BlueDark:#FFFFFF; /* Texto principal en blanco */
+  --BlueClear:#E0E0E0; /* Texto secundario en gris claro */
+  --White:#FF69B4; /* Fondo de elementos en rosa bonito */
+  --Whiteback:#C71585; /* Fondo principal en rosa más oscuro */
+}
+
+/* Body */
+
+body {
+  background-color: var(--Whiteback);
+  transition: background-color 0.5s ease;
+ }
+
+/* Header */
+
+header {
+  background-color: var(--White);
+  border-radius: 25px;
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+ }
+
+ .Titulo {
+  color: var(--BlueClear);
+ }
+
+ header button {
+  border: none ;
+  background: none;
+  margin: 0 10px;
+  color: var(--BlueClear);
+ }
+
+ header a {
+  text-decoration: none;
+  border: none ;
+  background: none;
+  margin: 0 10px;
+  color: var(--BlueClear);
+ }
+
+ header h1 {
+  color: var(--BlueDark);
+ }	
+
+ header a:hover {
+  border-radius: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+ }
+ 
+ header a:hover {
+  border-radius: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: var(--BlueDark);
+ }
+ 
+ /* General secciones secundarias */
+ 
+ .TextoSeccion {
+  text-align: center;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: var(--BlueDark);
+ }
+
+/* Seccion 1 */
+
+ .section-1 {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  background-color: var(--White);
+  border-radius: 25px;
+  padding: 10px;
+ }
+ 
+ .section-1 h2 {
+  color: var(--BlueDark);
+  margin-top: 0;
+ }
+
+ .section-1 p {
+  color: var(--BlueClear);
+  margin-top: 10px;
+ }
+ 
+ .section-1 .text-small {
+  color: var(--BlueClear);
+  margin-top: 10px;
+ }
+ 
+ .section-1 button {
+  align-self: flex-end;
+  margin-left: 90%;
+  border: none ;
+  background: none;
+  color: var(--BlueClear)
+ }
+
+ .section-1 a {
+  text-decoration: none;
+  border: none ;
+  background: none;
+  margin: 0 10px;
+  color: var(--BlueClear);
+ }
+
+ .section-1 a:hover {
+  border-radius: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+ }
+ 
+ .section-1 a:hover {
+  border-radius: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: var(--BlueDark);
+ }
+
+ /* Seccion 2 */
+
+ .section-2 {
+  margin-bottom: 5px;
+  display: flex; 
+  justify-content: space-around;
+  margin-right: 5px;
+  margin-left: 5px;
+ }
+ 
+ .section-2 > div {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  background-color: var(--White);
+  border-radius: 25px;
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+  padding-left: 4px;
+  padding-right: 4px;
+ }
+
+ .section-2 div > a {
+  text-decoration-line: none;
+ }
+
+ .section-2 h3 {
+  color: var(--BlueDark);
+  margin-top: 0;
+ }
+
+ .section-2 p {
+  color: var(--BlueClear);
+  margin-top: 0;  
+ }
+
+ .section-2 p > span {
+  color: var(--BlueClear);
+ }
+
+ .section-2 button {
+  align-self: flex-end;
+  margin-left: 80%;
+  border: none ;
+  background: none;
+  color: var(--BlueClear)
+ }
+ /* Seccion 3 */
+
+ .section-3 {
+  justify-content: space-between;
+ }	
+
+ .section-3 > div {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  background-color: var(--White);
+  border-radius: 25px;
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+  padding-left: 5px;
+  padding-right: 5px;
+ }
+
+ .section-3 div > a {
+  text-decoration: none;
+  border: none ;
+  background: none;
+ }
+
+ .section-3 h3 {
+  color: var(--BlueDark);
+  text-align: left;
+  margin-top: 0;
+ }
+
+ .section-3 h3> span {
+  color: var(--BlueClear);
+  align-self: right;
+ }
+ 
+ .section-3 p {
+  color: var(--BlueClear);
+  margin-top: 10px;
+ }
+ 
+ .section-3 button {
+  align-self: flex-end;
+  margin-left: 90%;
+  border: none ;
+  background: none;
+  color: var(--BlueClear)
+ }
+
+ /* Footer */
+
+ footer {
+  background-color: var(--White);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  border-radius: 25px;
+ }
+
+ footer p {
+  align-self: center;
+  color: var(--BlueDark);
+  margin-top: 0;
+ }
