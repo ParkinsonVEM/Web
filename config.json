@@ -1,0 +1,100 @@
+{
+  "appConfig": {
+    "name": "Park&Son",
+    "version": "1.0.0",
+    "description": "Aplicación web para ejercicios y terapias para personas con Parkinson",
+    "language": "es"
+  },
+  "terapias": {
+    "chiKung": {
+      "nombre": "Chi Kung",
+      "descripcion": "Ejercicios de Chi Kung para mejorar el equilibrio y la movilidad",
+      "ejercicios": [
+        {"id": "ejChik1", "nombre": "Ejercicio 1"},
+        {"id": "ejChik2", "nombre": "Ejercicio 2"},
+        {"id": "ejChik3", "nombre": "Ejercicio 3"}
+      ],
+      "rutinas": [
+        {"id": "rutChik1", "nombre": "Rutina Básica"},
+        {"id": "rutChik2", "nombre": "Rutina Intermedia"},
+        {"id": "rutChik3", "nombre": "Rutina Avanzada"}
+      ]
+    },
+    "yoga": {
+      "nombre": "Yoga",
+      "descripcion": "Posturas de yoga adaptadas para personas con Parkinson",
+      "ejercicios": [
+        {"id": "ejYoga1", "nombre": "Ejercicio 1"},
+        {"id": "ejYoga2", "nombre": "Ejercicio 2"},
+        {"id": "ejYoga3", "nombre": "Ejercicio 3"}
+      ],
+      "rutinas": [
+        {"id": "rutYoga1", "nombre": "Rutina Suave"},
+        {"id": "rutYoga2", "nombre": "Rutina Moderada"},
+        {"id": "rutYoga3", "nombre": "Rutina Intensiva"}
+      ]
+    },
+    "taichi": {
+      "nombre": "Tai Chi",
+      "descripcion": "Movimientos de Tai Chi para mejorar el equilibrio y la coordinación",
+      "ejercicios": [
+        {"id": "ejTaichi1", "nombre": "Ejercicio 1"},
+        {"id": "ejTaichi2", "nombre": "Ejercicio 2"},
+        {"id": "ejTaichi3", "nombre": "Ejercicio 3"}
+      ],
+      "rutinas": [
+        {"id": "rutTaichi1", "nombre": "Rutina Inicial"},
+        {"id": "rutTaichi2", "nombre": "Rutina Media"},
+        {"id": "rutTaichi3", "nombre": "Rutina Completa"}
+      ]
+    },
+    "musicoterapia": {
+      "nombre": "Musicoterapia",
+      "descripcion": "Ejercicios con música para estimular el movimiento y el estado de ánimo",
+      "ejercicios": [
+        {"id": "ejMusic1", "nombre": "Ejercicio 1"},
+        {"id": "ejMusic2", "nombre": "Ejercicio 2"},
+        {"id": "ejMusic3", "nombre": "Ejercicio 3"}
+      ],
+      "rutinas": [
+        {"id": "rutMusic1", "nombre": "Rutina Rítmica"},
+        {"id": "rutMusic2", "nombre": "Rutina Melódica"},
+        {"id": "rutMusic3", "nombre": "Rutina Armónica"}
+      ]
+    },
+    "estiramiento": {
+      "nombre": "Estiramiento",
+      "descripcion": "Ejercicios de estiramiento para mejorar la flexibilidad",
+      "ejercicios": [
+        {"id": "ejEsti1", "nombre": "Ejercicio 1"},
+        {"id": "ejEsti2", "nombre": "Ejercicio 2"},
+        {"id": "ejEsti3", "nombre": "Ejercicio 3"}
+      ],
+      "rutinas": [
+        {"id": "rutEsti1", "nombre": "Rutina Matutina"},
+        {"id": "rutEsti2", "nombre": "Rutina Vespertina"},
+        {"id": "rutEsti3", "nombre": "Rutina Nocturna"}
+      ]
+    }
+  },
+  "recursos": {
+    "fundaParkinson": {
+      "nombre": "Fundación Parkinson",
+      "descripcion": "Información sobre la Fundación y sus servicios"
+    },
+    "masNosotros": {
+      "nombre": "Más Sobre Nosotros",
+      "descripcion": "Información detallada sobre el proyecto y el equipo"
+    },
+    "desarrollo": {
+      "nombre": "Desarrollo",
+      "descripcion": "Información sobre el desarrollo de la aplicación"
+    }
+  },
+  "legal": {
+    "descargoResponsabilidad": {
+      "titulo": "Descargo de Responsabilidad",
+      "descripcion": "Términos legales y condiciones de uso de la aplicación"
+    }
+  }
+}
