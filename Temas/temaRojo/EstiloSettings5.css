@@ -1,0 +1,145 @@
+/* General y variables */
+
+* {
+    margin: 3px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  :root{
+    --BlueDark:#FFFFFF; /* Texto principal en blanco */
+    --BlueClear:#E0E0E0; /* Texto secundario en gris claro */
+    --White:#8B0000; /* Fondo de elementos en rojo vinotinto */
+    --Whiteback:#5E0000; /* Fondo principal en vinotinto más oscuro */
+  }
+  
+  /* Body */
+  
+  body {
+    background-color: var(--Whiteback);
+    transition: background-color 0.5s ease;
+   }
+  
+  /* Header */
+  
+  header {
+    background-color: var(--White);
+    border-radius: 25px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+   }
+  
+   .Titulo {
+    color: var(--BlueDark);
+   }
+  
+   header button {
+    border: none ;
+    background: none;
+    margin: 0 10px;
+    color: var(--BlueDark);
+   }
+  
+   header a {
+    text-decoration: none;
+    border: none ;
+    background: none;
+    margin: 0 10px;
+    color: var(--BlueDark);
+   }
+  
+   header h1 {
+    color: var(--BlueDark);
+   }	
+  
+   header a:hover {
+    border-radius: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+   }
+   
+   header a:hover {
+    border-radius: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--BlueDark);
+   }
+  
+   /* General secciones secundarias */
+   
+  body .TextoSeccion {
+    text-align: center;
+  }
+
+   .TextoSeccion {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    color: var(--BlueDark);
+   }
+  
+   /* Botones */
+   
+   .setting {
+    margin-bottom: 5px;
+    display: flex; 
+    justify-content: space-around;
+    margin-right: 5px;
+    margin-left: 5px;
+   }
+  
+   .setting > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    padding: 0 10%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    background-color: var(--White);
+    border-radius: 25px;
+  }
+
+  .setting div > a {
+    text-decoration: none;
+  }
+
+  .setting div > a > h4 {
+    font-size: 2rem;
+    align-self: flex-start;
+    color: var(--BlueDark);
+  }
+
+  .setting div > a > h4 {
+    font-size: 2rem;
+    align-self: flex-start;
+    color: var(--BlueDark);
+  }
+  
+  .setting div > a > span {
+    font-size: 3rem;
+    align-self: center;
+    color: var(--BlueDark);
+  }
+
+  
+
+   /* Footer */
+
+ footer {
+    background-color: var(--White);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+   }
+  
+   footer p {
+    align-self: center;
+    color: var(--BlueDark);
+    margin-top: 0;
+   }
