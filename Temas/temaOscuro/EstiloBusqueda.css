@@ -1,0 +1,189 @@
+/* General y variables */
+
+* {
+    margin: 3px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  :root{
+    --Gray:#394867;
+    --DarkGray:#14274E;
+    --Blue:#9BA4B4;
+    --White:#F1F6F9;
+  }
+  
+  /* Body */
+  
+  body {
+    background-color: var(--Gray);
+   }
+  
+  /* Header */
+  
+  header {
+    background-color: var(--DarkGray);
+    border-radius: 25px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,tting);
+   }
+
+   .Titulo {
+    color: var(--Blue);
+   }
+  
+   header button {
+    border: none ;
+    background: none;
+    margin: 0 10px;
+    color: var(--White);
+   }
+  
+   header a {
+    text-decoration: none;
+    border: none ;
+    background: none;
+    margin: 0 10px;
+    color: var(--White);
+   }
+  
+   header h2 {
+    color: var(--Blue);
+   }	
+  
+   header a:hover {
+    border-radius: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+   }
+   
+   header a:hover {
+    border-radius: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--Blue);
+   }
+
+  /* General seccion*/
+ 
+ .TextoSeccion {
+  text-align: center;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: var(--Blue);
+ }
+
+ .TextoSeccion-center {
+  text-align: center;
+  color: var(--Blue);
+}
+
+/* Barra */
+
+.section-barra{
+  background-color: var(--DarkGray);
+  border-radius: 25px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+input[type="search"] {
+  background-color: var(--DarkGray);
+  border: none;
+  border-color: var(--Gray);
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="search"]:hover{
+border: none;
+}
+
+button {
+  background-color: var(--Blue);
+  border-radius: 25px;
+  color: var(--DarkGray);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  
+  /* Seccion Ask */
+
+  .section-nos {
+    justify-content: space-between;
+   }	
+  
+   .section-nos > div {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    background-color: var(--DarkGray);
+    border-radius: 25px;
+    padding-top: 0.1px;
+    padding-bottom: 0.1px;
+    padding-left: 4px;
+    padding-right: 4px;
+   }
+
+   .section-nos a {
+    text-decoration: none;
+    border: none ;
+    background: none;
+    margin: 0 10px;
+    color: var(--White);
+   }
+  
+   .section-nos h3 {
+    color: var(--Blue);
+    margin-top: 0;
+   }
+  
+   .section-nos h3> span {
+    color: var(--Blue);
+    align-self: right;
+   }
+   
+   .section-nos p {
+    color: var(--White);
+    margin-top: 10px;
+   }
+   
+   .section-nos button {
+    align-self: flex-end;
+    margin-left: 90%;
+    border: none ;
+    background: none;
+    color: var(--White)
+   }
+  
+   .section-nos button:hover {
+    border-radius: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--Blue);
+   }
+  
+   /* Footer */
+  
+   footer {
+    background-color: var(--DarkGray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+   }
+  
+   footer p {
+    align-self: center;
+    color: var(--White);
+    margin-top: 0;
+   }
